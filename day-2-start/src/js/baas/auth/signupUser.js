@@ -3,8 +3,8 @@ import {createClient} from '@supabase/supabase-js'
 // make connection with supabase
 const supabase = createClient(
     import.meta.env.VITE_SUPABASE_URL,
-    import.meta.env.VITE_SUPABASE_KEY
-)
+    import.meta.env.VITE_SUPABASE_KEY,
+);
 
 async function signupUser(email, password) {
     let {data, error} = await supabase.auth.signUp({
